@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Assignment 4</title>
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+    <script type="text/javascript" src="glMatrix-0.9.5.min.js"></script>
+    <script type="text/javascript" src="Assign4.js"></script>
+  </head>
+
+  <body onload="webGLStart();">
+    <div style="display: flex; align-items: left; justify-content: center;">
+      <div style="line-height: 0.7; padding-left: 3mm; padding-right: 3mm; padding-bottom: 3mm; padding-top: 3mm; border: 2px solid black; background-color: rgb(188, 234, 218);">
+        <canvas
+          id="Assign4"
+          style="border: none"
+          width="410"
+          height="410"
+        ></canvas>
+        <br><br>
+        <label for="bgimg">Select Background Image </label>
+        <input type="file" id="backgroundImage" accept="image/*">
+        <br><br>
+        <label for="fgimg">Select Foreground Image </label>
+        <input type="file" id="foregroundImage" accept="image/*">
+        <br><br>
+        <b>Image Mode</b>
+        <input type="radio" id="BackgroundOnly" name="imageMode" value="bgOnly">
+        <label for="bgOnly">Background Only</label>
+        <input type="radio" id="AlphaBlended" name="imageMode" value="blended">
+        <label for="blended">Alpha Blended</label>
+        <br><br>
+        <label for="greyscale">GrayScale</label>
+        <input type="checkbox" id="greyscale" name="greyscale" value="greyscale">
+        <label for="sepia">Sepia</label>
+        <input type="checkbox" id="sepia" name="sepia" value="sepia">
+        <br><br>
+        Contrast <input type="range" id="Contrast" name="Contrast" min="-0.5" max="0.5" value="0" step= "0.01" value="1" style="width: 250px; height: 6px;">
+        <br><br>
+        Brightness <input type="range" id="Brightness" name="Brightness" min="0.5" max="2" value="1" step= "0.01" value="1" style="width: 250px; height: 6px;">
+        <br><br>
+        <b>Process Background Image:</b>
+        <br><br>
+        <label for="checkbox1">Smooth</label>
+        <input type="checkbox" id="Smooth" name="checkbox1" value="checkbox1">
+        <label for="checkbox2">Sharpen</label>
+        <input type="checkbox" id="Sharpen" name="checkbox2" value="checkbox2">
+        <label for="checkbox3">Gradient</label>
+        <input type="checkbox" id="Gradient" name="checkbox3" value="checkbox3">
+        <label for="checkbox4">Laplacian</label>
+        <input type="checkbox" id="Laplacian" name="checkbox4" value="checkbox4">
+        <br><br>
+        <button id="Reset">Reset Scene</button>
+        <button id="Save">Save Screenshot</button>
+      </div>
+    </div>
+  </body>
+</html>
